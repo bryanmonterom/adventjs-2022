@@ -21,6 +21,8 @@
 | 06 | Creating xmas decorations	 | 🟠| [Show me!](https://adventjs.dev/challenges/2022/6)
 | 07 | Doing gifts inventory	| 🟢 | [Show me!](https://adventjs.dev/challenges/2022/7)
 | 08 | We need a mechanic!	 | 🟠| [Show me!](https://adventjs.dev/challenges/2022/8)
+| 09 | Crazy Xmas lights	 | 🟢| [Show me!](https://adventjs.dev/challenges/2022/9)
+
 
 
 
