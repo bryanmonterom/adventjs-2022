@@ -22,6 +22,10 @@
 | 07 | Doing gifts inventory	| 🟢 | [Show me!](https://adventjs.dev/challenges/2022/7)
 | 08 | We need a mechanic!	 | 🟠| [Show me!](https://adventjs.dev/challenges/2022/8)
 | 09 | Crazy Xmas lights	 | 🟢| [Show me!](https://adventjs.dev/challenges/2022/9)
+| 10 | The Santa Claus sleigh jump	 | 🟠| [Show me!](https://adventjs.dev/challenges/2022/10)
+| 12 | Electric sleighs, wow!	 | 🟠| [Show me!](https://adventjs.dev/challenges/2022/12
+
+
 
 
 
