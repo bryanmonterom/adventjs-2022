@@ -1,35 +1,43 @@
-function carryGifts(gifts, maxWeight) {
-  let bag = [];
-  let packagingGift = "";
+  function carryGifts(gifts, maxWeight) {
+    let bag = [];
+    let packagingGift = "";
 
-  let doesPackageFit = gifts.every((item) => item.length <= maxWeight);
+    let doesPackageFit = gifts.every((item) => item.length <= maxWeight);
 
-  doesPackageFit;
-
-  if (!doesPackageFit) {
-    return [];
-  }
-
-  for (let index = 0; index < gifts.length; index++) {
-    if (
-      packagingGift.replace(/\s/g, "").length + gifts[index].length <=
-      maxWeight
-    ) {
-      packagingGift += gifts[index] + " ";
-
-      if (index == gifts.length - 1) {
-        bag.push(packagingGift.trimEnd());
-      }
-    } else {
-      bag.push(packagingGift.trimEnd());
-      packagingGift = "";
-      packagingGift += gifts[index] + " ";
-      if (index == gifts.length - 1) {
-        bag.push(packagingGift.trimEnd());
-      }
+    if (!doesPackageFit) {
+      return [];
     }
-  }
-  return bag;
-}
 
-console.log(carryGifts(["toy", "toy", "toy", "toy"], 2));
+    const verifyFit = (n) => {
+      if (n == gifts.length) {
+        return bag;
+      }
+  
+
+      if (
+        packagingGift.replace(/\s/g, "").length + gifts[n].length <=
+        maxWeight
+      ) {
+        packagingGift += gifts[n] + " ";
+
+        if (n == gifts.length - 1) {
+            bag.push(packagingGift.trimEnd());
+          }
+        verifyFit(n + 1);
+      } else {
+        bag.push(packagingGift.trimEnd());
+        packagingGift = "";
+        packagingGift += gifts[n] + " ";
+        if (n == gifts.length - 1) {
+          bag.push(packagingGift.trimEnd());
+        }
+        verifyFit(n + 1);
+      }
+    };
+
+    verifyFit(0);
+
+    return bag;
+  }
+
+  console.log(carryGifts(["game", "bike", "book", "toy"], 10));
