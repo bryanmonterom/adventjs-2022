@@ -26,26 +26,40 @@ function printTable(gifts) {
   const bulidBody = () => {
     let body = "";
 
-    for (let index = 0; index < gifts.length; index++) {
+    gifts.forEach(element => {
       body +=
         "| " +
-        gifts[index].name +
-        buildPattern(" ", findMaxGiftLength - gifts[index].name.length) +
+        element.name +
+        buildPattern(" ", findMaxGiftLength - element.name.length) +
         " | " +
-        gifts[index].quantity +
+        element.quantity +
         buildPattern(
           " ",
-          findMaxQtyLength - gifts[index].quantity.toString().length
+          findMaxQtyLength - element.quantity.toString().length
         ) +
         " |" +
         "\n";
-    }
+    });
+
+    // for (let index = 0; index < gifts.length; index++) {
+    //   body +=
+    //     "| " +
+    //     gifts[index].name +
+    //     buildPattern(" ", findMaxGiftLength - gifts[index].name.length) +
+    //     " | " +
+    //     gifts[index].quantity +
+    //     buildPattern(
+    //       " ",
+    //       findMaxQtyLength - gifts[index].quantity.toString().length
+    //     ) +
+    //     " |" +
+    //     "\n";
+    // }
 
     return body;
   };
 
   let header = buildHeader(findMaxGiftLength, findMaxQtyLength);
-  let body = bulidBody();
 
   return (
     "+".repeat((header.length - 1) / 2) +
