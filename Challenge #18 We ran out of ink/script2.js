@@ -1,7 +1,11 @@
 function dryNumber(dry, numbers) {
+let emptyyA = Array(numbers).fill(1);
+
+emptyyA
+
   return Array(numbers)
     .fill(1)
-    .map((x, y) => x + y)
+    .map((val, index) => val + index)
     .filter((item) => item.toString().includes(dry.toString()));
 }
 
