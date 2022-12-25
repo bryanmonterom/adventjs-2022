@@ -41,20 +41,7 @@ function printTable(gifts) {
         "\n";
     });
 
-    // for (let index = 0; index < gifts.length; index++) {
-    //   body +=
-    //     "| " +
-    //     gifts[index].name +
-    //     buildPattern(" ", findMaxGiftLength - gifts[index].name.length) +
-    //     " | " +
-    //     gifts[index].quantity +
-    //     buildPattern(
-    //       " ",
-    //       findMaxQtyLength - gifts[index].quantity.toString().length
-    //     ) +
-    //     " |" +
-    //     "\n";
-    // }
+ 
 
     return body;
   };
@@ -72,11 +59,19 @@ function printTable(gifts) {
 }
 
 console.log(
-  printTable([
-    { name: "Plaaaaaaaaaaaaa", quantity: 374892 },
-    { name: "ok", quantity: 23531 },
-  ])
-);
+  printTable(([
+    { name: 'Game', quantity: 2 },
+    { name: 'Bike', quantity: 1 },
+    { name: 'Bike', quantity: 1 },
+    { name: 'Bike', quantity: 1 },
+    { name: 'Bike', quantity: 1 },
+    { name: 'Bike', quantity: 222222222222222221 },
+    { name: 'BikeBikeBikeBikeBike', quantity: 1 },
+    { name: 'Bike BikeBikeBikeBikeBikeBikeBikeBike', quantity: 1 },
+
+    { name: 'Book', quantity: 3 }
+  ]
+)));
 
 // printTable(
 
